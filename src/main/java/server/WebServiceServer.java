@@ -1,7 +1,7 @@
 package server;
 
-import service.FileTransferer;
-import service.impl.FileTransfererImpl;
+import services.filestransfer.FileTransferer;
+import services.filestransfer.impl.FileTransfererImpl;
 
 import javax.xml.ws.Endpoint;
 
