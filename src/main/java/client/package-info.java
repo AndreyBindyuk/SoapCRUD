@@ -1,2 +1,2 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://impl.service/")
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://impl.filestransfer.services/")
 package client;

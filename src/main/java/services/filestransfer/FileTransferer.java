@@ -14,5 +14,5 @@ public interface FileTransferer {
     public byte[] download(String fileName) throws FileFaultException;
 
     @WebMethod
-    public String delete(String filePath) throws FileFaultException;
+    public String delete(String fileName) throws FileFaultException;
 }

@@ -27,7 +27,8 @@ public class FileTransfererImpl implements FileTransferer {
     }
 
     @WebMethod
-    public byte[] download(String filePath) throws FileFaultException {
+    public byte[] download(String fileName) throws FileFaultException {
+        String filePath = getServerFilePath() + fileName;
         System.out.println("Sending file: " + filePath);
         File file = new File(filePath);
         if (!file.exists()) {
@@ -38,7 +39,8 @@ public class FileTransfererImpl implements FileTransferer {
     }
 
     @WebMethod
-    public String delete(String filePath) throws FileFaultException {
+    public String delete(String fileName) throws FileFaultException {
+        String filePath = getServerFilePath() + fileName;
         File file = new File(filePath);
         if (!file.exists()) {
             throw new FileFaultException("File does not exist by current file path");

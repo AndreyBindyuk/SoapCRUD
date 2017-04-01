@@ -7,6 +7,7 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
+import javax.xml.ws.FaultAction;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 
@@ -17,7 +18,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "FileTransfererImpl", targetNamespace = "http://impl.service/")
+@WebService(name = "FileTransfererImpl", targetNamespace = "http://impl.filestransfer.services/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -26,32 +27,65 @@ public interface FileTransfererImpl {
 
     /**
      * 
-     * @param arg1
      * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws FileFaultException_Exception
      */
     @WebMethod
-    @RequestWrapper(localName = "upload", targetNamespace = "http://impl.service/", className = "client.Upload")
-    @ResponseWrapper(localName = "uploadResponse", targetNamespace = "http://impl.service/", className = "client.UploadResponse")
-    @Action(input = "http://impl.service/FileTransfererImpl/uploadRequest", output = "http://impl.service/FileTransfererImpl/uploadResponse")
-    public void upload(
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "delete", targetNamespace = "http://impl.filestransfer.services/", className = "client.Delete")
+    @ResponseWrapper(localName = "deleteResponse", targetNamespace = "http://impl.filestransfer.services/", className = "client.DeleteResponse")
+    @Action(input = "http://impl.filestransfer.services/FileTransfererImpl/deleteRequest", output = "http://impl.filestransfer.services/FileTransfererImpl/deleteResponse", fault = {
+        @FaultAction(className = FileFaultException_Exception.class, value = "http://impl.filestransfer.services/FileTransfererImpl/delete/Fault/FileFaultException")
+    })
+    public String delete(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0)
+        throws FileFaultException_Exception
+    ;
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws FileFaultException_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "upload", targetNamespace = "http://impl.filestransfer.services/", className = "client.Upload")
+    @ResponseWrapper(localName = "uploadResponse", targetNamespace = "http://impl.filestransfer.services/", className = "client.UploadResponse")
+    @Action(input = "http://impl.filestransfer.services/FileTransfererImpl/uploadRequest", output = "http://impl.filestransfer.services/FileTransfererImpl/uploadResponse", fault = {
+        @FaultAction(className = FileFaultException_Exception.class, value = "http://impl.filestransfer.services/FileTransfererImpl/upload/Fault/FileFaultException")
+    })
+    public String upload(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0,
         @WebParam(name = "arg1", targetNamespace = "")
-        byte[] arg1);
+        byte[] arg1)
+        throws FileFaultException_Exception
+    ;
 
     /**
      * 
      * @param arg0
      * @return
      *     returns byte[]
+     * @throws FileFaultException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "download", targetNamespace = "http://impl.service/", className = "client.Download")
-    @ResponseWrapper(localName = "downloadResponse", targetNamespace = "http://impl.service/", className = "client.DownloadResponse")
-    @Action(input = "http://impl.service/FileTransfererImpl/downloadRequest", output = "http://impl.service/FileTransfererImpl/downloadResponse")
+    @RequestWrapper(localName = "download", targetNamespace = "http://impl.filestransfer.services/", className = "client.Download")
+    @ResponseWrapper(localName = "downloadResponse", targetNamespace = "http://impl.filestransfer.services/", className = "client.DownloadResponse")
+    @Action(input = "http://impl.filestransfer.services/FileTransfererImpl/downloadRequest", output = "http://impl.filestransfer.services/FileTransfererImpl/downloadResponse", fault = {
+        @FaultAction(className = FileFaultException_Exception.class, value = "http://impl.filestransfer.services/FileTransfererImpl/download/Fault/FileFaultException")
+    })
     public byte[] download(
         @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+        String arg0)
+        throws FileFaultException_Exception
+    ;
 
 }

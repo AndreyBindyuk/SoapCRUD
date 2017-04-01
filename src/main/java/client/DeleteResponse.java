@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for uploadResponse complex type.
+ * <p>Java class for deleteResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="uploadResponse">
+ * &lt;complexType name="deleteResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "uploadResponse", propOrder = {
+@XmlType(name = "deleteResponse", propOrder = {
     "_return"
 })
-public class UploadResponse {
+public class DeleteResponse {
 
     @XmlElement(name = "return")
     protected String _return;

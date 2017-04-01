@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "FileTransfererImplService", targetNamespace = "http://impl.service/", wsdlLocation = "http://localhost:9898/epam/fileService?wsdl")
+@WebServiceClient(name = "FileTransfererImplService", targetNamespace = "http://impl.filestransfer.services/", wsdlLocation = "http://localhost:9898/epam/fileService?wsdl")
 public class FileTransfererImplService
     extends Service
 {
 
     private final static URL FILETRANSFERERIMPLSERVICE_WSDL_LOCATION;
     private final static WebServiceException FILETRANSFERERIMPLSERVICE_EXCEPTION;
-    private final static QName FILETRANSFERERIMPLSERVICE_QNAME = new QName("http://impl.service/", "FileTransfererImplService");
+    private final static QName FILETRANSFERERIMPLSERVICE_QNAME = new QName("http://impl.filestransfer.services/", "FileTransfererImplService");
 
     static {
         URL url = null;
@@ -69,7 +69,7 @@ public class FileTransfererImplService
      */
     @WebEndpoint(name = "FileTransfererImplPort")
     public FileTransfererImpl getFileTransfererImplPort() {
-        return super.getPort(new QName("http://impl.service/", "FileTransfererImplPort"), FileTransfererImpl.class);
+        return super.getPort(new QName("http://impl.filestransfer.services/", "FileTransfererImplPort"), FileTransfererImpl.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class FileTransfererImplService
      */
     @WebEndpoint(name = "FileTransfererImplPort")
     public FileTransfererImpl getFileTransfererImplPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://impl.service/", "FileTransfererImplPort"), FileTransfererImpl.class, features);
+        return super.getPort(new QName("http://impl.filestransfer.services/", "FileTransfererImplPort"), FileTransfererImpl.class, features);
     }
 
     private static URL __getWsdlLocation() {

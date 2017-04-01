@@ -1,0 +1,3 @@
+__________________FILE OPERATIONS__________________
+Choose action number
+1.Upload file on server  |  2.Download file from server  |  3.Remove file from server
