@@ -42,23 +42,6 @@ public interface FileTransfererImpl {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns byte[]
-     * @throws FileFaultException_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "download", targetNamespace = "http://impl.filestransfer.services/", className = "generatedclientcode.Download")
-    @ResponseWrapper(localName = "downloadResponse", targetNamespace = "http://impl.filestransfer.services/", className = "generatedclientcode.DownloadResponse")
-    public byte[] download(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0)
-        throws FileFaultException_Exception
-    ;
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      * @return
@@ -74,6 +57,23 @@ public interface FileTransfererImpl {
         String arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         byte[] arg1)
+        throws FileFaultException_Exception
+    ;
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns byte[]
+     * @throws FileFaultException_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "download", targetNamespace = "http://impl.filestransfer.services/", className = "generatedclientcode.Download")
+    @ResponseWrapper(localName = "downloadResponse", targetNamespace = "http://impl.filestransfer.services/", className = "generatedclientcode.DownloadResponse")
+    public byte[] download(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0)
         throws FileFaultException_Exception
     ;
 

@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "FileTransfererImplService", targetNamespace = "http://impl.filestransfer.services/", wsdlLocation = "http://localhost:9898/epam/fileService?wsdl")
+@WebServiceClient(name = "FileTransfererImplService", targetNamespace = "http://impl.filestransfer.services/", wsdlLocation = "file:/D:/MENTORINGAPPLICATIONS/SoapCRUD/wsdl/FileTransfererImplService.wsdl")
 public class FileTransfererImplService
     extends Service
 {
@@ -30,9 +30,9 @@ public class FileTransfererImplService
         try {
             URL baseUrl;
             baseUrl = generatedclientcode.FileTransfererImplService.class.getResource(".");
-            url = new URL(baseUrl, "http://localhost:9898/epam/fileService?wsdl");
+            url = new URL(baseUrl, "file:/D:/MENTORINGAPPLICATIONS/SoapCRUD/wsdl/FileTransfererImplService.wsdl");
         } catch (MalformedURLException e) {
-            logger.warning("Failed to create URL for the wsdl Location: 'http://localhost:9898/epam/fileService?wsdl', retrying as a local file");
+            logger.warning("Failed to create URL for the wsdl Location: 'file:/D:/MENTORINGAPPLICATIONS/SoapCRUD/wsdl/FileTransfererImplService.wsdl', retrying as a local file");
             logger.warning(e.getMessage());
         }
         FILETRANSFERERIMPLSERVICE_WSDL_LOCATION = url;

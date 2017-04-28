@@ -17,22 +17,40 @@
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <artifactId>jaxws-maven-plugin</artifactId>
                 <executions>
                     <execution>
+                        <phase>process-classes</phase>
                         <goals>
-                            <goal>java</goal>
+                            <goal>wsgen</goal>
                         </goals>
-                        <phase>compile</phase>
                     </execution>
                 </executions>
                 <configuration>
-                    <executable>true</executable>
-                    <includePluginDependencies>true</includePluginDependencies>
-                    <mainClass>Runner</mainClass>
+                    <sei>services.filestransfer.impl.FileTransfererImpl</sei>
+                    <genWsdl>true</genWsdl>
+                    <keep>true</keep>
+                    <resourceDestDir>../wsdl</resourceDestDir>
                 </configuration>
             </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>exec-maven-plugin</artifactId>-->
+                <!--<version>1.2.1</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>java</goal>-->
+                        <!--</goals>-->
+                        <!--<phase>compile</phase>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<configuration>-->
+                    <!--<executable>true</executable>-->
+                    <!--<includePluginDependencies>true</includePluginDependencies>-->
+                    <!--<mainClass>Runner</mainClass>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 

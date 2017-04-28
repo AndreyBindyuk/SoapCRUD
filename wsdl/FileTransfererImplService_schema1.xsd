@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://www.example.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://impl.filestransfer.services/">
+
+  <xs:import namespace="http://impl.filestransfer.services/" schemaLocation="FileTransfererImplService_schema2.xsd"/>
+
+  <xs:element name="FileFaultException" type="ns1:FileFaultException"/>
+
+</xs:schema>
+

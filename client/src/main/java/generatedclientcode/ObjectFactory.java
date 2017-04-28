@@ -42,11 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UploadResponse }
+     * Create an instance of {@link Upload }
      * 
      */
-    public UploadResponse createUploadResponse() {
-        return new UploadResponse();
+    public Upload createUpload() {
+        return new Upload();
     }
 
     /**
@@ -74,19 +74,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UploadResponse }
+     * 
+     */
+    public UploadResponse createUploadResponse() {
+        return new UploadResponse();
+    }
+
+    /**
      * Create an instance of {@link FileFaultException }
      * 
      */
     public FileFaultException createFileFaultException() {
         return new FileFaultException();
-    }
-
-    /**
-     * Create an instance of {@link Upload }
-     * 
-     */
-    public Upload createUpload() {
-        return new Upload();
     }
 
     /**
